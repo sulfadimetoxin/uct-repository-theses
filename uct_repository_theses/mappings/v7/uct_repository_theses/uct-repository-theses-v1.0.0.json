@@ -1,0 +1,8 @@
+{
+    "mappings": {
+    "date_detection": false,
+    "numeric_detection": false,
+    "dynamic": false,
+    "oarepo:extends": ["nr-theses-metadata-v1.0.0.json#/mappings"]
+  }
+}

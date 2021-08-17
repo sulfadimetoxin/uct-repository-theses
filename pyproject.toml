@@ -1,0 +1,39 @@
+[tool.poetry]
+name = 'uct-repository-theses'
+version = "1.0.0"
+description = "UCT repository theses"
+authors = [
+    'Denys Chaplyhin <chaplyhd@vscht.cz>'
+]
+
+
+[tool.poetry.dependencies]
+python = "^3.8"
+techlib-nr-common-metadata = {version = "^3.0.0a48", allow-prereleases = true}
+techlib-nr-theses-metadata = {version = "^1.0.0a13", allow-prereleases = true}
+
+[tool.poetry.plugins]
+[tool.poetry.plugins."invenio_base.apps"]
+'uct_repository_theses' = 'uct_repository_theses:UCTRepositoryTheses'
+
+[tool.poetry.plugins."invenio_base.api_apps"]
+'uct_repository_theses' = 'uct_repository_theses:UCTRepositoryTheses'
+
+[tool.poetry.plugins.'invenio_jsonschemas.schemas']
+'uct_repository_theses' = 'uct_repository_theses.jsonschemas'
+
+[tool.poetry.plugins.'invenio_search.mappings']
+'uct_repository_theses' = 'uct_repository_theses.mappings'
+
+[tool.poetry.plugins.'oarepo_mapping_includes']
+'uct_repository_theses' = 'uct_repository_theses.mapping_includes'
+
+[tool.poetry.plugins."invenio_pidstore.minters"]
+'uct_repository_theses' = 'uct_repository_theses.minters:uct_repository_theses_pid_minter'
+
+[tool.poetry.plugins."invenio_pidstore.fetchers"]
+'uct_repository_theses' = 'uct_repository_theses.fetchers:uct_repository_theses_pid_fetcher'
+
+[build-system]
+requires = ["poetry>=0.12"]
+build-backend = "poetry.masonry.api"

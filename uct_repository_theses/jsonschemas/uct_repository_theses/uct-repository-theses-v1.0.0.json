@@ -1,0 +1,10 @@
+{
+    "allOf": [
+        {
+            "$ref": "../nr_theses_metadata/nr-theses-metadata-v1.0.0.json"
+        },
+        {
+            "id": "https://nusl.cz/schemas/uct_repository_theses/uct-repository-theses-v1.0.0.json"
+        }
+    ]
+}
